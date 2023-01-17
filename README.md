@@ -66,6 +66,10 @@ Controller/action: UserController.login
 
 View: views/user/login.tsx
 
+In this demo, username: `admin`, password: reactror
+
+
+
 Since there is no need for access checking in user login, use the `@skipAccessCheck` decorator before the UserController.login method to skip the access check.
 
 ### Logout

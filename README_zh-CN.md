@@ -70,6 +70,8 @@ Controller/action: UserController.login
 
 View: views/user/login.tsx
 
+在本演示中，用户名：`admin`, 密码：reactror
+
 在用户登录中由于不需要进行权限检查，所以在UserController.login方法前使用`@skipAccessCheck`装饰器用来跳过权限检查。
 
 ### 登录退出
