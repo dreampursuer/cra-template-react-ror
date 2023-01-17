@@ -18,7 +18,7 @@ login为action，对应到UserController中的login方法
 
 详情请参阅后面的路径映射部分。
 
-本模板包含了`react-ror` + `react-router` + `ant design` + `typescript`。
+本模板包含了`[react-ror](https://github.com/dreampursuer/react-ror)` + `react-router` + `ant design` + `typescript`。
 
 使用其他语言阅读：[English](README.md) | 简体中文
 

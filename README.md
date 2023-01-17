@@ -14,7 +14,7 @@ Where 'user' is the controller, the implementation is: 'UserController'.
 'login' is an action, corresponding to the login method in the UserController.
 See the section on 'Path Mapping' later for more details.
 
-This template contains `react-ror` + `react-router` + `ant design` + `typescript`.
+This template contains `[react-ror`](https://github.com/dreampursuer/react-ror) + `react-router` + `ant design` + `typescript`.
 
 Read this in other languages: English | [简体中文](README_zh-CN.md)
 
@@ -67,8 +67,6 @@ Controller/action: UserController.login
 View: views/user/login.tsx
 
 In this demo, username: `admin`, password: reactror
-
-
 
 Since there is no need for access checking in user login, use the `@skipAccessCheck` decorator before the UserController.login method to skip the access check.
 
