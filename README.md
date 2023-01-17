@@ -30,7 +30,7 @@ or
 yarn create react-app my-app --template react-ror
 ```
 
-After installation, you need to manually modify tsconfig.json to set `experimentalDecorators` to true to support decorator:
+After installation, you need to manually modify `tsconfig.json` to set `experimentalDecorators` to true to support decorator:
 
 ```json
 {

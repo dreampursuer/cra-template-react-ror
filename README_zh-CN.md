@@ -34,7 +34,7 @@ npx create-react-app my-app --template react-ror
 yarn create react-app my-app --template react-ror
 ```
 
-安装完成后还需要手工修改下tsconfig.json，把`experimentalDecorators`设置为true以支持decorator:
+安装完成后还需要手工修改下`tsconfig.json`，把`experimentalDecorators`设置为true以支持decorator:
 
 ```json
 {
