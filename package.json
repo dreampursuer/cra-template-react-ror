@@ -1,0 +1,20 @@
+{
+  "name": "cra-template-react-ror",
+  "version": "0.1.0",
+  "description": "The official react-ror+typescript template for Create React App.",
+  "main": "template.json",
+  "repository": "https://github.com/dreampursuer/cra-template-react-ror.git",
+  "author": "jien",
+  "license": "MIT",
+  "files": [
+    "template",
+    "template.json"
+  ],
+  "keywords": [
+    "react-ror",
+    "create-react-app",
+    "template",
+    "typescript",
+    "ant design"
+  ]
+}
