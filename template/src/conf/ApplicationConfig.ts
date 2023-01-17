@@ -20,7 +20,7 @@ export function setLoginUser(user: User|null){
     loginUser = user
 }
 
-export function OnCheck(params?: any){
+export function AccessCheck(params?: any){
     if (!loginUser){
         redirectTo('user', 'login')
         return false
