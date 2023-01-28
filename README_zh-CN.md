@@ -12,13 +12,13 @@
 /user/login
 ```
 
-其中user为controller，具体的实现为：UserController
+其中`user`为controller，具体的实现为：`UserController`
 
-login为action，对应到UserController中的login方法
+`login`为action，对应到UserController中的login方法
 
-详情请参阅后面的路径映射部分。
+详情请参阅后面的`路径映射`部分。
 
-本模板包含了`[react-ror](https://github.com/dreampursuer/react-ror)` + `react-router` + `ant design` + `typescript`。
+本模板包含了[react-ror](https://github.com/dreampursuer/react-ror) + `react-router` + `ant design` + `typescript`。
 
 使用其他语言阅读：[English](README.md) | 简体中文
 
@@ -32,16 +32,6 @@ npx create-react-app my-app --template react-ror
 
 ```shell
 yarn create react-app my-app --template react-ror
-```
-
-安装完成后还需要手工修改下`tsconfig.json`，把`experimentalDecorators`设置为true以支持decorator:
-
-```json
-{
-    "compilerOptions": {
-        "experimentalDecorators": true
-    }
-}
 ```
 
 然后运行：
@@ -154,6 +144,8 @@ layoutMapping：定义了布局的名字和实际布局之间的映射关系
 
 accessCheck：用于访问检查。如果不设置则不启用访问检查，这意味着所有的页面都能被访问
 
+skipAccessCheck：用于跳过某些path的访问检查，例如，如果想要跳过对登录页面的访问检查，则可以在其中设置：/user/login
+
 ### conf目录
 
 conf目录用于定义配置文件，在本模板中有 `ApplicatonConfig.ts` 文件定义了 `controllerMapping` 和 `layoutMapping` 。
@@ -233,11 +225,10 @@ export function AccessCheck(params?: any){
 }
 ```
 
-对于某action不需要进行访问权限检查的话可以使用@skipAccessCheck，例如：
+对于某action不需要进行访问权限检查的话可以定义skipAccessCheck，例如，不想对登录页面进行访问检查，则可以使用如下定义：
 
 ```javascript
-    @skipAccessCheck
-    public login(){
-        return <Login />
-    }
+export const skipAccessCheck = ["/user/login"]
 ```
+
+skipAccessCheck中的格式为：/controller/action

@@ -1,6 +1,6 @@
 {
   "name": "cra-template-react-ror",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "The official react-ror+typescript template for Create React App.",
   "main": "template.json",
   "repository": "https://github.com/dreampursuer/cra-template-react-ror.git",

@@ -10,11 +10,11 @@ For example:
 /user/login
 ```
 
-Where 'user' is the controller, the implementation is: 'UserController'.
-'login' is an action, corresponding to the login method in the UserController.
-See the section on 'Path Mapping' later for more details.
+Where `user` is the controller, the implementation is: `UserController`.
+`login` is an action, corresponding to the login method in the UserController.
+See the section on Path Mapping later for more details.
 
-This template contains `[react-ror`](https://github.com/dreampursuer/react-ror) + `react-router` + `ant design` + `typescript`.
+This template contains [react-ror](https://github.com/dreampursuer/react-ror) + `react-router` + `ant design` + `typescript`.
 
 Read this in other languages: English | [简体中文](README_zh-CN.md)
 
@@ -130,7 +130,7 @@ The main directory structure is as follows:
 The application entry calling `ReactRorApp` in react-ror, is done as follows:
 
 ```jsx
-<ReactRorApp controllerMapping={controllerMapping} layoutMapping={layoutMapping} accessCheck={AccessCheck} />
+<ReactRorApp controllerMapping={controllerMapping} layoutMapping={layoutMapping} accessCheck={AccessCheck} skipAccessCheck={skipAccessCheck} />
 ```
 
 Of which：
@@ -149,6 +149,8 @@ The above instructs that the action in MainController is called when /main is ac
 layoutMapping：Defines the mapping between the name of the layout and the layout view
 
 accessCheck：Used for access checking. If not set then access checking is not enabled, this means that all pages can be accessed.
+
+skipAccessCheck: used to skip the access check of some paths, for example, if you want to skip the access check of the login action, you can set in it: /user/login
 
 ### conf directory
 
@@ -229,11 +231,10 @@ export function AccessCheck(params?: any){
 }
 ```
 
-You can use @skipAccessCheck if you don't want to do access checking for an action, e.g.:
+You can define `skipAccessCheck` if you don't need to do access checking for the action, for example, if you don't want to do access checking on the login action, you can use the following definition:
 
 ```javascript
-    @skipAccessCheck
-    public login(){
-        return <Login />
-    }
+export const skipAccessCheck = ["/user/login"]
 ```
+
+The pattern in skipAccessCheck is: /controller/action

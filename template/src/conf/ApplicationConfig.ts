@@ -20,6 +20,8 @@ export function setLoginUser(user: User|null){
     loginUser = user
 }
 
+export const skipAccessCheck = ["/user/login"]
+
 export function AccessCheck(params?: any){
     if (!loginUser){
         redirectTo('user', 'login')
