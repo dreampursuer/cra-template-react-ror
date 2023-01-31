@@ -29,3 +29,17 @@ export function AccessCheck(params?: any){
     }
     return true
 }
+
+function loadConfig(){
+    let env: string = process.env.NODE_ENV
+    if (env === 'production'){
+        env = 'prod'
+    }
+    else if (env === 'development'){
+        env = 'dev'
+    }
+    const config = require(`./config.${env}.js`);
+    return config
+}
+
+export const config = loadConfig()
