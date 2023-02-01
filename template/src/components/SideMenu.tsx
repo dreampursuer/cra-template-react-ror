@@ -2,12 +2,8 @@ import {Menu, MenuProps} from "antd";
 import {UserOutlined} from "@ant-design/icons";
 import React from "react";
 import {useNavigate} from "react-router-dom";
+import {createLink} from "react-ror";
 
-
-function createLink(controller: string, action: string, params?: any){
-    let url = "/" + controller + "/" + action
-    return url
-}
 
 const sideMenuItems: MenuProps['items'] = [
     {
@@ -16,7 +12,7 @@ const sideMenuItems: MenuProps['items'] = [
         icon: <UserOutlined />,
         children:[
             {
-                key: createLink('user', 'show'),
+                key: createLink({controller: 'user', action: 'show', noHash: true}),
                 label: 'User Info'
             }
         ]

@@ -7,12 +7,12 @@ const items = [
     {
         key: 'center',
         icon: <UserOutlined />,
-        label: <a href={createLink('user', 'show')}>User Info</a>,
+        label: <a href={createLink({controller: 'user', action: 'show'})}>User Info</a>,
     },
     {
         key: 'logout',
         icon: <LogoutOutlined />,
-        label: <a href={createLink('user', 'logout')}>Logout</a>,
+        label: <a href={createLink({controller: 'user', action: 'logout'})}>Logout</a>,
     },
 ]
 
