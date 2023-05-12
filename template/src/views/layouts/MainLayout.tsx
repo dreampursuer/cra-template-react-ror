@@ -3,6 +3,7 @@ import {Layout, Menu, MenuProps} from "antd";
 import {AvatarDropdown} from "../../components/AvatarDropdown";
 import {SideMenu} from "../../components/SideMenu";
 import {Outlet} from "react-router-dom";
+import "../../assets/stylesheets/main.css"
 
 const topMenuItems: MenuProps['items'] = [
     {
@@ -19,7 +20,7 @@ export function MainLayout(){
     return (
         <Layout style={{height: "100vh"}}>
             <Layout.Header style={{display: 'flex', justifyContent: 'space-between'}}>
-                <div style={{color: '#fff', fontSize: 18, fontWeight: 600, marginRight: 20}}><a href={'#/main/index'}>React Ror</a></div>
+                <div className={"logo"}><a href={'/'}>React Ror</a></div>
                 <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['nav1']} items={topMenuItems} />
                 <div style={{marginLeft: 'auto'}}>
                     <AvatarDropdown />
